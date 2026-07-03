@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>继承 | Web屯</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="系统学习，慢一点比较快">
+    
+    <link rel="preload" href="/assets/css/0.styles.8f3dca9f.css" as="style"><link rel="preload" href="/assets/js/app.08c17699.js" as="script"><link rel="preload" href="/assets/js/2.3dc1b8de.js" as="script"><link rel="preload" href="/assets/js/1.7f771cfb.js" as="script"><link rel="preload" href="/assets/js/42.c3231297.js" as="script"><link rel="prefetch" href="/assets/js/10.23a1f579.js"><link rel="prefetch" href="/assets/js/11.c389195a.js"><link rel="prefetch" href="/assets/js/12.1d996921.js"><link rel="prefetch" href="/assets/js/13.4d4410c4.js"><link rel="prefetch" href="/assets/js/14.37ef2a72.js"><link rel="prefetch" href="/assets/js/15.5542c093.js"><link rel="prefetch" href="/assets/js/16.d48fd1ce.js"><link rel="prefetch" href="/assets/js/17.bd8d538c.js"><link rel="prefetch" href="/assets/js/18.6d3b94c1.js"><link rel="prefetch" href="/assets/js/19.eb35cfee.js"><link rel="prefetch" href="/assets/js/20.c11ec329.js"><link rel="prefetch" href="/assets/js/21.db1b5d88.js"><link rel="prefetch" href="/assets/js/22.73bcb42b.js"><link rel="prefetch" href="/assets/js/23.fb42296a.js"><link rel="prefetch" href="/assets/js/24.36969e4e.js"><link rel="prefetch" href="/assets/js/25.7a015bf1.js"><link rel="prefetch" href="/assets/js/26.51e02b0e.js"><link rel="prefetch" href="/assets/js/27.e72211e4.js"><link rel="prefetch" href="/assets/js/28.b094761a.js"><link rel="prefetch" href="/assets/js/29.a175b064.js"><link rel="prefetch" href="/assets/js/3.5322f14a.js"><link rel="prefetch" href="/assets/js/30.7271a344.js"><link rel="prefetch" href="/assets/js/31.60bee65e.js"><link rel="prefetch" href="/assets/js/32.4d6c0c0c.js"><link rel="prefetch" href="/assets/js/33.94000c36.js"><link rel="prefetch" href="/assets/js/34.f3d50fbc.js"><link rel="prefetch" href="/assets/js/35.9a34209a.js"><link rel="prefetch" href="/assets/js/36.28729daf.js"><link rel="prefetch" href="/assets/js/37.eb42e727.js"><link rel="prefetch" href="/assets/js/38.8a790eb5.js"><link rel="prefetch" href="/assets/js/39.755f68f6.js"><link rel="prefetch" href="/assets/js/4.84e1e480.js"><link rel="prefetch" href="/assets/js/40.28797b92.js"><link rel="prefetch" href="/assets/js/41.ed41a439.js"><link rel="prefetch" href="/assets/js/43.187e391e.js"><link rel="prefetch" href="/assets/js/44.d497564f.js"><link rel="prefetch" href="/assets/js/45.8e8db9ff.js"><link rel="prefetch" href="/assets/js/46.f2b1504f.js"><link rel="prefetch" href="/assets/js/47.4a4dce55.js"><link rel="prefetch" href="/assets/js/48.a19bf661.js"><link rel="prefetch" href="/assets/js/49.0c268b9c.js"><link rel="prefetch" href="/assets/js/5.f0541060.js"><link rel="prefetch" href="/assets/js/50.cbc19c7b.js"><link rel="prefetch" href="/assets/js/6.dfb06aa0.js"><link rel="prefetch" href="/assets/js/7.7551a9fb.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.5e19b665.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8f3dca9f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Web屯</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/Poole33/front-learning-resource" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/Poole33/front-learning-resource" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/JS/作用域" class="sidebar-heading clickable open"><span>JS基础</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/JS/作用域.html" class="sidebar-link">作用域</a></li><li><a href="/JS/有几种作用域？.html" class="sidebar-link">有几种作用域？</a></li><li><a href="/JS/提升.html" class="sidebar-link">提升</a></li><li><a href="/JS/闭包.html" class="sidebar-link">闭包</a></li><li><a href="/JS/this.html" class="sidebar-link">this</a></li><li><a href="/JS/数据类型.html" class="sidebar-link">数据类型</a></li><li><a href="/JS/值.html" class="sidebar-link">值</a></li><li><a href="/JS/对象.html" class="sidebar-link">对象</a></li><li><a href="/JS/对象拷贝.html" class="sidebar-link">对象拷贝</a></li><li><a href="/JS/原型链.html" class="sidebar-link">原型链</a></li><li><a href="/JS/继承.html" class="active sidebar-link">继承</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/JS/继承.html#面向对象-到底什么意思" class="sidebar-link">面向对象 到底什么意思？</a></li><li class="sidebar-sub-header"><a href="/JS/继承.html#类-到底是什么意思" class="sidebar-link">类 到底是什么意思？</a></li><li class="sidebar-sub-header"><a href="/JS/继承.html#js如何实现-继承" class="sidebar-link">JS如何实现“继承”？</a></li></ul></li><li><a href="/JS/类型转换.html" class="sidebar-link">类型转换</a></li><li><a href="/JS/EventLoop.html" class="sidebar-link">EventLoop 事件循环</a></li><li><a href="/JS/Promise.html" class="sidebar-link">Promise</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/HTTP/什么是HTTP" class="sidebar-heading clickable"><span>HTTP基础</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/Vue/如何实现双向绑定" class="sidebar-heading clickable"><span>Vue基础</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/DataStructure/数据结构是什么？" class="sidebar-heading clickable"><span>数据结构</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/框架相关/qiankun微前端" class="sidebar-heading clickable"><span>框架相关</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="继承"><a href="#继承" class="header-anchor">#</a> 继承</h1> <blockquote><p>孩子<code>复制</code>父亲的全部能力，并在此基础上对复制的能力进行修改而不影响父亲的能力，我们称之为<code>继承</code>。</p></blockquote> <p>我们为什么要学习<code>继承</code>呢？因为这是我们实现<code>前端工程化</code>的过程中，一定绕不开的话题，下面我们一步步来了解一下如何实现<code>继承</code>。</p> <p>要理解<code>继承</code>，这里就要先知道，<code>类</code>、<code>面向对象</code>是什么意思？</p> <h2 id="面向对象-到底什么意思"><a href="#面向对象-到底什么意思" class="header-anchor">#</a> 面向对象 到底什么意思？</h2> <blockquote><p>将<code>对象</code>作为程序的<code>基本单元</code>。将<code>数据</code>和<code>操作数据的函数</code>封装成对象，以提高软件的重用性、灵活性和扩展性。<br>
+在这个程序里，万物皆是<code>对象</code>，所以就被称为<code>面向对象</code>。</p></blockquote> <p><code>面向对象</code>是一种<code>代码规范</code>，你实际开发中可以遵循，也可以不遵循。也不是所有语言都支持面向对象的形式进行开发。</p> <p>但可以按照<code>面向对象规范</code>进行开发的语言，都能被成为<code>面向对象语言</code>。</p> <p>所以<code>JS</code>也是<code>面向对象语言</code>。</p> <h2 id="类-到底是什么意思"><a href="#类-到底是什么意思" class="header-anchor">#</a> 类 到底是什么意思？</h2> <blockquote><p><code>类</code>实际上是一种<code>数据类型</code>（<code>对象</code>的抽象形式）。每个类包含<code>数据</code>和<code>操作数据的函数</code>。类的<code>实例</code>称为对象。</p></blockquote> <p>并不是所有的<code>面向对象语言</code>都具有<code>类</code>这种数据类型（比如<code>JS</code>就没有...JS在ES6中新增的class只是一种语法糖，不是真的类），而<code>继承</code>则是<code>类设计模式</code>中的一种<code>基本特征</code>。</p> <div class="language- extra-class"><pre><code>类设计模式的基本特征包括：继承、封装、多态。
+</code></pre></div><p><code>JS</code>底层没有<code>类</code>这种<code>数据类型</code>，所以也就不是具备<code>类设计模式的特征</code>（所以标题的继承加了引号），JS是一套基于原型链的<code>委托</code>模式（当前没有的功能委托给原型链的上一层，层层委托）。</p> <blockquote><p>但由于我们知道了<code>类</code>的<code>表现形式</code>和设计思路，所以使用一些方法，可以让<code>JS</code>实现近似<code>继承</code>的功能（但会很别扭）。</p></blockquote> <h2 id="js如何实现-继承"><a href="#js如何实现-继承" class="header-anchor">#</a> JS如何实现“继承”？</h2> <p>JS要实现<code>&quot;继承&quot;</code>，需要满足下面几个条件：</p> <ul><li>子类是父类的一个<code>复本</code>（可以理解为一个快照）</li> <li>子类修改继承过来的功能，不影响父类（因为子类是快照，所以当然不能影响父类）</li> <li>子类可以<code>重写/新增</code>功能（随便改写快照）</li></ul> <blockquote><p><code>类</code>是图纸，<code>实例</code>是建筑物。<br> <code>复制一份图纸</code>起到<code>参考作用</code>，具体建筑物造成什么样子，是根据具体的<code>施工条件</code>来进行的。具体施工时会在图纸的基础上进行调整和优化，不会完全按照图纸去实施（当然也可以完全按照图纸去实施，看具体的施工条件）。</p></blockquote> <p>下面就来具体实现下JS中的<code>继承</code>吧</p> <p>直接上代码（可以直接打开浏览器控制台，直接复制粘贴看结果）</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 方法1 构造函数继承</span>
+<span class="token keyword">function</span> <span class="token function">Parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Jack'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Parent</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">sayHi</span><span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">hi! I am </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">~</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">Parent</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 通过this绑定，把Parent里的属性“继承”到child</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> child <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Jack</span>
+child<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Uncaught TypeError: child.sayHi is not a function</span>
+
+<span class="token comment">// 遗留问题：无法继承原型链上的方法</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 方法2 构造函数 + 原型链连接 继承</span>
+<span class="token keyword">function</span> <span class="token function">Parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Jack'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Parent</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">sayHi</span><span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">hi! I am </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">~</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">Parent</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Child</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token class-name">Parent</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> child <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Jack</span>
+child<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// hi! I am Jack~</span>
+
+<span class="token comment">// 这里有个问题，如果Child修改自己的原型链，会影响Parent</span>
+<span class="token class-name">Child</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">run</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'run'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Parent</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// run</span>
+
+<span class="token comment">// 遗留问题：修改Child的原型链，会影响Parent</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 方法3 构造函数 + 原型链连接 继承（解决原型链相互影响）</span>
+<span class="token keyword">function</span> <span class="token function">Parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Jack'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Parent</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">sayHi</span><span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">hi! I am </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">~</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">Parent</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 创建一个对象，这个对象的[[prototype]]关联到Parent.prototype，返回这个对象给Child.prototype（创建的对象内容是空的，所以也就没有了constructor）</span>
+<span class="token class-name">Child</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token class-name">Parent</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 此时Child修改自己的原型链，不会影响Parent</span>
+<span class="token class-name">Child</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">run</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'run'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Parent</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Uncaught TypeError: Parent.prototype.run is not a function</span>
+
+<span class="token keyword">var</span> child <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Jack</span>
+child<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// hi! I am Jack~</span>
+child<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// run</span>
+
+<span class="token comment">// 此时又产生一个新问题...不能准确知道child继承自谁。js实现继承就是有这么多问题...</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Child<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// false 此时Child的constructor为空，会顺着原型链往上找，然后针找到了Parent</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Parent<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+
+<span class="token comment">// 遗留问题：Child的实例child，继承信息为Parent</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 方法4 构造函数 + 原型链连接 继承（解决继承信息不准确）</span>
+<span class="token keyword">function</span> <span class="token function">Parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Jack'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Parent</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">sayHi</span><span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">hi! I am </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">~</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">Parent</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Child</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token class-name">Parent</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 手动给Child添加constructor</span>
+<span class="token class-name">Child</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> Child<span class="token punctuation">;</span>
+
+<span class="token class-name">Child</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">run</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'run'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> child <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Jack</span>
+child<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// hi! I am Jack~</span>
+child<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// run</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Child<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Parent<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// false</span>
+
+<span class="token comment">// 此时使用JS实现了 类似 类设计模式的继承</span>
+<span class="token comment">// 但和真正的继承还是有区别的</span>
+<span class="token comment">// 比如顺着Child的原型链往上，还是能修改Parent</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 方法5 ES6 class 语法糖 版</span>
+<span class="token keyword">class</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Jack'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">hi! I am </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">~</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token keyword">extends</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'run'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> child <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Jack</span>
+child<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// hi! I am Jack~</span>
+child<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// run</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Child<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Parent<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// false</span>
+
+<span class="token comment">// 可以说class的出现，极大的方便了我们去实现继承</span>
+<span class="token comment">// 但他掩盖了 JS 不是类设计模式的本质...</span>
+<span class="token comment">// 但只要我们知道这个问题存在，就不怕去使用。我们能根据现实情况去权衡</span>
+<span class="token comment">// 低版本不支持class的浏览器，polyfill是使用构造函数来实现的</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 方法6 使用JS的链式委托来实现 类似继承</span>
+<span class="token keyword">var</span> Parent <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Jack'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">sayHi</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">hi! I am </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">~</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> Child <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>Parent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Child<span class="token punctuation">.</span><span class="token function-variable function">run</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'run'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> child <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>Child<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Jack</span>
+child<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// hi! I am Jack~</span>
+child<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// run</span>
+<span class="token comment">// 判断继承自谁</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>child<span class="token punctuation">)</span> <span class="token operator">===</span> Child<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>child<span class="token punctuation">)</span> <span class="token operator">===</span> Parent<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// false</span>
+
+
+<span class="token comment">// 不清楚为啥的，可以复习下this啦~</span>
+child<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Tony'</span><span class="token punctuation">;</span>
+child<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// hi! I am Tony~</span>
+<span class="token comment">// 不会影响Parent</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Parent<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Parent<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// hi! I am Jack~</span>
+
+<span class="token comment">// 使用链式委托的方式，实现更简洁，也更符合JS的底层实现</span>
+<span class="token comment">// 熟悉原型链的话，会发现这种方法，相比构造函数，在原型链连接结构上也更简单且清晰（大家可以根据上一章原型链中的思路，动手画一下这两种的链路图）</span>
+<span class="token comment">// 在了解了内部的各种实现原理后，最后如何使用还是看大家喜好</span>
+</code></pre></div><p>如果觉得内容对你有帮助，请点个<strong>赞</strong>和<strong>关注</strong>，你们的鼓励是我持续更新下去的动力，比心。</p> <p><strong>如需转载</strong>请注明出处，感恩。</p> <p>更多内容可先关注<a href="https://github.com/ptcp3/front-learning-resource" target="_blank" rel="noopener noreferrer">GitHub<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/JS/原型链.html" class="prev">
+        原型链
+      </a></span> <span class="next"><a href="/JS/类型转换.html">
+        类型转换
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.08c17699.js" defer></script><script src="/assets/js/2.3dc1b8de.js" defer></script><script src="/assets/js/1.7f771cfb.js" defer></script><script src="/assets/js/42.c3231297.js" defer></script>
+  </body>
+</html>
